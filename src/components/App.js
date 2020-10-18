@@ -3,7 +3,12 @@ import AddTodo from "./AddTodo";
 import TodoList from "./TodoList";
 import Footer from "./Footer";
 
+import AddTodoContainer from "../containers/AddTodoContainer";
+import TodoListContainer from "../containers/TodoListContainer";
+import FooterContainer from "../containers/FooterContainer";
+
 class App extends Component {
+  /*
     constructor(props) {
       super(props);
       this.state = {
@@ -12,18 +17,19 @@ class App extends Component {
       }
       this.nextTodoId = 0; // 因为它和UI渲染无关，所以不定义到state中
     }
-
+  */
     render() {
-        const todos = this.getVisibleTodos()
-        const { filter } = this.props;
+      //  const todos = this.getVisibleTodos()
+      //  const { filter } = this.props;
         return (
             <div className="App">
-              <AddTodo addTodo={this.addTodo} />
-              <TodoList todos={ todos } toggleTodo={this.toggleTodo} />
-              <Footer filter={filter} setVisibilityFilter={this.setVisibilityFilter} />
+              <AddTodoContainer />
+              <TodoListContainer />
+              <FooterContainer />
             </div>
         );
     }
+  /*
   getVisibleTodos = () => { 
       const currentFilter = this.state.filter;
       return this.state.todos.filter(item => {
@@ -66,6 +72,7 @@ class App extends Component {
       filter
     })
   }
+  */
 }
 
 export default App

@@ -10,6 +10,10 @@ export default combineReducers({
   text
 })
 
+/*
+  拆分reducer
+  
+*/
 
 
 
